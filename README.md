@@ -2,7 +2,7 @@ GMA-testing
 =======
 
 Personal testing for google maps API
-Original code forked from SeedTrip
+Original code forked from SeedTip
 
 
 
