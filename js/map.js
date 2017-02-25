@@ -1,5 +1,4 @@
 $(function() {
-
 	var mapOptions = {
 		zoom: 5,
 		center: new google.maps.LatLng(35.652832, 139.839478),
@@ -16,6 +15,8 @@ $(function() {
 	};
 
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  var visibleMarkers = []
 
   var locations = [
   {lat: 35.6895, lng: 139.6917},
@@ -40,4 +41,18 @@ $(function() {
   var markerCluster = new MarkerClusterer(map, markers,
   {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
+
+  map.addListener('bounds_changed', function() {
+    for (var i = 0; i < markers.length; i++) {
+      if (map.getBounds().contains(markers[i].getPosition())) {
+        temp = []
+        if (_.findWhere(temp, markers[i]) == null) {
+          temp.push(markers[i])
+        }
+        visibleMarkers = temp
+      }
+    }
+  });
 });
+
+  

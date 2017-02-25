@@ -1,7 +1,10 @@
 =======
-Google Maps Api Demo
+plaing around with Google Maps Api 
 
-Personal testing for google maps API
+testing out...
+  1. google maps javascript api
+  2. google maps Marker Cluster
+  3. event based on visible marker on map
 
 Originally Forked from https://github.com/pauldessert/SeedTip
 Changed Remote to Original repository since contents started to have nothing
